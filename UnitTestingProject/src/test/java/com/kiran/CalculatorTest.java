@@ -51,7 +51,7 @@ public class CalculatorTest {
 	@Test
 	public void testDivideThrowsArithmeticExxception() {
 	
-		assertThrows(IllegalArgumentException.class, ()-> calc.divide(10,0));
+		assertThrows(ArithmeticException.class, ()-> calc.divide(10,0));
 	}
 	
 	
