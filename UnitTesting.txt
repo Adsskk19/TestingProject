@@ -1,0 +1,101 @@
+Unit Testing:
+----------------------------------
+You know the input You know the output
+5,5 for adding
+10 = 10 or not we check
+
+
+Integration Testing - 10%
+
+actual testing 
+we will let everything happen with actual data
+We will see entire call how it is happening.
+
+Junit5 ->99% we use this for Unit testing\
+we will some bugs or flaws in our logic with this
+
+Mockito ->we mock some dummy data
+In real time always giving a call to database is costly
+hence we mock with some dummy instead of getting data from database.
+we mock the bean and No repository call will be done.
+
+
+
+src/test/java
+
+@SpringBootTest //It marks class as test class
+//It loads entire spring container and entire beans
+
+Calculator.class      in src/main/java Folder
+CalculatorTest.class  in src/test/java Folder
+
+we autowired the class
+
+we write methods and we put @Test annotation to check the methods
+and we check with  assertEquals(20,res);
+
+@Autowired
+Calculator calculator;
+
+@Test  //success check
+public void testAddSuccess(){
+int res = calculator.add(10,10)
+assertEquals(20,res);
+}
+
+@Test //Failure check
+public void testAddFailure(){
+int res = calculator.add(10,10)
+assertNotEquals(15,res);
+}
+
+
+@Test 
+public void testSubFunction(){
+int res = calculator.sub(10,5)
+assertEquals(5,res);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
